@@ -1,0 +1,9 @@
+.elements__lower-block {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 25px auto 31px 21px;
+  max-width: 246px;
+  max-height: 23px;
+  box-sizing: border-box;
+}

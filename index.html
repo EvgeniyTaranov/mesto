@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mesto</title>
+  <link rel="stylesheet" href="./pages/index.css">
+</head>
+
+<body class="body">
+  <div class="page">
+    <header class="header">
+      <img src="./images/mesto-white-logo.svg" alt="Белый логотип Место" class="header__logo">
+    </header>
+
+    <main class="content">
+      <section class="profile">
+        <img src="./images/kusto.jpg" alt="Фото Жака-Ива Кусто" class="profile__avatar">
+        <div class="profile__info">
+          <div class="profile__header-block">
+            <h1 class="profile__name">Жак-Ив Кусто</h1>
+            <button class="edit-button"></button>
+          </div>
+          <p class="profile__about">Исследователь океана</p>
+        </div>
+        <button class="add-button"></button>
+      </section>
+
+      <section class="elements">
+        <ul class="elements__grid">
+          <li class="elements__card">
+            <img src="./images/karachaevsk.jpg" alt="Фото Карачаевска" class="elements__image">
+            <div class="elements__lower-block">
+              <h2 class="elements__place">Карачаевск</h2>
+              <button class="like-button"></button>
+            </div>
+          </li>
+          <li class="elements__card">
+            <img src="./images/gora-elbrus.jpg" alt="Фото Эльбруса" class="elements__image">
+            <div class="elements__lower-block">
+              <h2 class="elements__place">Гора Эльбрус</h2>
+              <button class="like-button"></button>
+            </div>
+          </li>
+          <li class="elements__card">
+            <img src="./images/dombai.jpg" alt="Фото Домбая" class="elements__image">
+            <div class="elements__lower-block">
+              <h2 class="elements__place">Домбай</h2>
+              <button class="like-button"></button>
+            </div>
+          </li>
+          <li class="elements__card">
+            <img src="./images/gora-elbrus.jpg" alt="Фото Эльбруса" class="elements__image">
+            <div class="elements__lower-block">
+              <h2 class="elements__place">Гора Эльбрус</h2>
+              <button class="like-button"></button>
+            </div>
+          </li>
+          <li class="elements__card">
+            <img src="./images/dombai.jpg" alt="Фото Домбая" class="elements__image">
+            <div class="elements__lower-block">
+              <h2 class="elements__place">Домбай</h2>
+              <button class="like-button"></button>
+            </div>
+          </li>
+          <li class="elements__card">
+            <img src="./images/karachaevsk.jpg" alt="Фото Карачаевска" class="elements__image">
+            <div class="elements__lower-block">
+              <h2 class="elements__place">Карачаево-Черкесия</h2>
+              <button class="like-button"></button>
+            </div>
+          </li>
+        </ul>
+      </section>
+
+    </main>
+
+    <footer class="footer">
+      <p class="footer__copyright">© 2023 Mesto Russia</p>
+    </footer>
+
+  </div>
+
+  <section class="popup">
+    <form class="popup__form">
+      <button class="popup__close-button"></button>
+      <h3 class="popup__header">Редактировать профиль</h3>
+      <fieldset class="popup__fieldset">
+        <input type="text" placeholder="Введите имя" class="popup__name-field popup__name-field_input">
+        <input type="text" placeholder="Укажите род занятий" class="popup__about-field popup__about-field_input">
+      </fieldset>
+      <button class="popup__save-button" type="submit">Сохранить</button>
+    </form>
+  </section>
+
+  <script src="./scripts/script.js"></script>
+</body>
+
+</html>
