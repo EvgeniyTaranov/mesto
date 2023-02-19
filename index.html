@@ -16,15 +16,15 @@
 
     <main class="content">
       <section class="profile">
-        <img src="./images/kusto.jpg" alt="Фото Жака-Ива Кусто" class="profile__avatar">
+        <img src="./images/kusto.jpg" alt="Аватар пользователя" class="profile__avatar">
         <div class="profile__info">
           <div class="profile__header-block">
             <h1 class="profile__name">Жак-Ив Кусто</h1>
-            <button class="edit-button"></button>
+            <button class="profile__edit-button" type="button" aria-label="Изменить"></button>
           </div>
           <p class="profile__about">Исследователь океана</p>
         </div>
-        <button class="add-button"></button>
+        <button class="profile__add-button" type="button" aria-label="Добавить"></button>
       </section>
 
       <section class="elements">
@@ -33,42 +33,42 @@
             <img src="./images/karachaevsk.jpg" alt="Фото Карачаевска" class="elements__image">
             <div class="elements__lower-block">
               <h2 class="elements__place">Карачаевск</h2>
-              <button class="like-button"></button>
+              <button class="elements__like-button" type="button" aria-label="Лайк"></button>
             </div>
           </li>
           <li class="elements__card">
             <img src="./images/gora-elbrus.jpg" alt="Фото Эльбруса" class="elements__image">
             <div class="elements__lower-block">
               <h2 class="elements__place">Гора Эльбрус</h2>
-              <button class="like-button"></button>
+              <button class="elements__like-button" type="button" aria-label="Лайк"></button>
             </div>
           </li>
           <li class="elements__card">
             <img src="./images/dombai.jpg" alt="Фото Домбая" class="elements__image">
             <div class="elements__lower-block">
               <h2 class="elements__place">Домбай</h2>
-              <button class="like-button"></button>
+              <button class="elements__like-button" type="button" aria-label="Лайк"></button>
             </div>
           </li>
           <li class="elements__card">
             <img src="./images/gora-elbrus.jpg" alt="Фото Эльбруса" class="elements__image">
             <div class="elements__lower-block">
               <h2 class="elements__place">Гора Эльбрус</h2>
-              <button class="like-button"></button>
+              <button class="elements__like-button" type="button" aria-label="Лайк"></button>
             </div>
           </li>
           <li class="elements__card">
             <img src="./images/dombai.jpg" alt="Фото Домбая" class="elements__image">
             <div class="elements__lower-block">
               <h2 class="elements__place">Домбай</h2>
-              <button class="like-button"></button>
+              <button class="elements__like-button" type="button" aria-label="Лайк"></button>
             </div>
           </li>
           <li class="elements__card">
             <img src="./images/karachaevsk.jpg" alt="Фото Карачаевска" class="elements__image">
             <div class="elements__lower-block">
               <h2 class="elements__place">Карачаево-Черкесия</h2>
-              <button class="like-button"></button>
+              <button class="elements__like-button" type="button" aria-label="Лайк"></button>
             </div>
           </li>
         </ul>
@@ -82,17 +82,21 @@
 
   </div>
 
-  <section class="popup">
-    <form class="popup__form">
-      <button class="popup__close-button"></button>
-      <h3 class="popup__header">Редактировать профиль</h3>
-      <fieldset class="popup__fieldset">
-        <input type="text" placeholder="Введите имя" class="popup__name-field popup__name-field_input">
-        <input type="text" placeholder="Укажите род занятий" class="popup__about-field popup__about-field_input">
-      </fieldset>
-      <button class="popup__save-button" type="submit">Сохранить</button>
-    </form>
-  </section>
+  <div class="popup">
+    <div class="popup__container">
+      <form class="popup__form" name="introductionForm">
+        <button class="popup__close-button" aria-label="Закрыть"></button>
+        <h3 class="popup__header">Редактировать профиль</h3>
+        <fieldset class="popup__fieldset">
+          <input id="name-field" name="nameInput" type="text" placeholder="Введите имя"
+            class="popup__field popup__field_name_input">
+          <input id="about-field" name="aboutInput" type="text" placeholder="Укажите род занятий"
+            class="popup__field popup__field_about_input">
+        </fieldset>
+        <button class="popup__save-button" type="submit" aria-label="Сохранить">Сохранить</button>
+      </form>
+    </div>
+  </div>
 
   <script src="./scripts/script.js"></script>
 </body>

@@ -1,4 +1,4 @@
-.popup__name-field {
+.popup__field {
   font-weight: 400;
   font-size: 14px;
   line-height: 17px;
@@ -11,12 +11,12 @@
   margin: 0 36px;
 }
 
-.popup__name-field::placeholder {
+.popup__field::placeholder {
   color: #000000;
 }
 
 @media screen and (max-width: 540px) {
-  .popup__name-field {
+  .popup__field {
     max-width: 238px;
     margin: 0 22px;
   }

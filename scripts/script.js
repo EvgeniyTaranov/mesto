@@ -1,4 +1,4 @@
-const editButton = document.querySelector('.edit-button');
+const editButton = document.querySelector('.profile__edit-button');
 
 let profileName = document.querySelector('.profile__name');
 
@@ -10,10 +10,11 @@ const formElement = popup.querySelector('.popup__form');
 
 const closeButton = popup.querySelector('.popup__close-button');
 
-let nameInput = formElement.querySelector('.popup__name-field_input');
-let jobInput = formElement.querySelector('.popup__about-field_input');
+let nameInput = formElement.querySelector('.popup__field_name_input');
+let jobInput = formElement.querySelector('.popup__field_about_input');
 
-const likeButtons = document.querySelectorAll('.like-button');
+// Переменная, необходимая для работы кнопки like
+// const likeButtons = document.querySelectorAll('.elements__like-button');
 
 function openPopup() {
   popup.classList.add('popup_opened');
@@ -32,11 +33,12 @@ function handleFormSubmit(evt) {
   closePopup();
 };
 
-likeButtons.forEach(button => {
-  button.addEventListener('click', () => {
-    button.classList.toggle('like-button_active');
-  });
-});
+// Функция, управляющая нажатием кнопки like
+// likeButtons.forEach(button => {
+//   button.addEventListener('click', () => {
+//     button.classList.toggle('elements__like-button_type_active');
+//   });
+// });
 
 editButton.addEventListener('click', openPopup);
 closeButton.addEventListener('click', closePopup);

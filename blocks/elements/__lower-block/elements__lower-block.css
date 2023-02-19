@@ -4,6 +4,11 @@
   align-items: center;
   margin: 25px auto 31px 21px;
   max-width: 246px;
-  max-height: 23px;
   box-sizing: border-box;
+}
+
+@media screen and (max-width: 320px) {
+  .elements__lower-block {
+    margin: 21px 20px 31px 20px;
+  }
 }
