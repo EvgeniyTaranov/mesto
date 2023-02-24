@@ -10,8 +10,8 @@ const formElement = popup.querySelector('.popup__form');
 
 const closeButton = popup.querySelector('.popup__close-button');
 
-let nameInput = formElement.querySelector('.popup__field_name_input');
-let jobInput = formElement.querySelector('.popup__field_about_input');
+let nameInput = formElement.querySelector('.popup__field_input_name');
+let jobInput = formElement.querySelector('.popup__field_input_about');
 
 // Переменная, необходимая для работы кнопки like
 // const likeButtons = document.querySelectorAll('.elements__like-button');

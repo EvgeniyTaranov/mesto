@@ -23,5 +23,6 @@
 @media screen and (max-width: 320px) {
   .elements__grid {
     grid-template-rows: 361px;
+    gap: 19px;
   }
 }
