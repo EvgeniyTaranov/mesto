@@ -29,51 +29,8 @@
 
       <section class="elements">
         <ul class="elements__grid">
-          <li class="elements__card">
-            <img src="./images/karachaevsk.jpg" alt="Фото Карачаевска" class="elements__image">
-            <div class="elements__lower-block">
-              <h2 class="elements__place">Карачаевск</h2>
-              <button class="elements__like-button" type="button" aria-label="Лайк"></button>
-            </div>
-          </li>
-          <li class="elements__card">
-            <img src="./images/gora-elbrus.jpg" alt="Фото Эльбруса" class="elements__image">
-            <div class="elements__lower-block">
-              <h2 class="elements__place">Гора Эльбрус</h2>
-              <button class="elements__like-button" type="button" aria-label="Лайк"></button>
-            </div>
-          </li>
-          <li class="elements__card">
-            <img src="./images/dombai.jpg" alt="Фото Домбая" class="elements__image">
-            <div class="elements__lower-block">
-              <h2 class="elements__place">Домбай</h2>
-              <button class="elements__like-button" type="button" aria-label="Лайк"></button>
-            </div>
-          </li>
-          <li class="elements__card">
-            <img src="./images/gora-elbrus.jpg" alt="Фото Эльбруса" class="elements__image">
-            <div class="elements__lower-block">
-              <h2 class="elements__place">Гора Эльбрус</h2>
-              <button class="elements__like-button" type="button" aria-label="Лайк"></button>
-            </div>
-          </li>
-          <li class="elements__card">
-            <img src="./images/dombai.jpg" alt="Фото Домбая" class="elements__image">
-            <div class="elements__lower-block">
-              <h2 class="elements__place">Домбай</h2>
-              <button class="elements__like-button" type="button" aria-label="Лайк"></button>
-            </div>
-          </li>
-          <li class="elements__card">
-            <img src="./images/karachaevsk.jpg" alt="Фото Карачаевска" class="elements__image">
-            <div class="elements__lower-block">
-              <h2 class="elements__place">Карачаево-Черкесия</h2>
-              <button class="elements__like-button" type="button" aria-label="Лайк"></button>
-            </div>
-          </li>
         </ul>
       </section>
-
     </main>
 
     <footer class="footer">
@@ -97,6 +54,41 @@
       </form>
     </div>
   </div>
+
+  <div class="card-popup popup">
+    <div class="popup__container">
+      <form class="popup__form" name="addNewCardForm">
+        <button class="popup__close-button" type="button" aria-label="Закрыть"></button>
+        <h3 class="popup__header">Новое место</h3>
+        <fieldset class="popup__fieldset">
+          <input id="name-field" name="nameInput" type="text" placeholder="Название"
+            class="popup__field popup__field_input_name">
+          <input id="about-field" name="aboutInput" type="text" placeholder="Ссылка на картинку"
+            class="popup__field popup__field_input_about">
+        </fieldset>
+        <button class="popup__save-button" type="submit" aria-label="Сохранить">Сохранить</button>
+      </form>
+    </div>
+  </div>
+
+  <div class="image-popup popup">
+    <div class="image-popup__container">
+      <button class="popup__close-button" type="button" aria-label="Закрыть"></button>
+      <img class="image-popup__image">
+      <h3 class="image-popup__title"></h3>
+    </div>
+  </div>
+
+  <template id="elements__card">
+    <li class="elements__card">
+      <img class="elements__image">
+      <div class="elements__lower-block">
+        <h2 class="elements__place"></h2>
+        <button class="elements__like-button" type="button" aria-label="Лайк"></button>
+      </div>
+      <button class="elements__trash-button" type="button" aria-label="Удалить"></button>
+    </li>
+  </template>
 
   <script src="./scripts/script.js"></script>
 </body>
