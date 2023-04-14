@@ -63,10 +63,12 @@ let numberOfCardsAddedFromForm = 0;
 
 function openPopup(popup) {
   popup.classList.add('popup_opened');
+  document.addEventListener('keydown', closeByEsc);
 }
 
 function closePopup(popup) {
   popup.classList.remove('popup_opened');
+  document.addEventListener('keydown', closeByEsc);
 }
 
 closeButtons.forEach((button) => {
@@ -74,6 +76,21 @@ closeButtons.forEach((button) => {
   button.addEventListener('click', () => closePopup(popup));
 });
 
+function closeByEsc(evt) {
+  if (evt.key === "Escape") {
+    const openedPopup = document.querySelector('.popup_opened');
+    closePopup(openedPopup);
+  }
+}
+
+const overlays = document.querySelectorAll('.popup');
+for (let i = 0; i < overlays.length; i++) {
+  overlays[i].addEventListener('click', function (event) {
+    if (event.target === event.currentTarget) {
+      closePopup(event.currentTarget);
+    }
+  });
+}
 
 function createCard(cardData) {
   const cardElement = cardTemplate.content.querySelector('.elements__card').cloneNode(true);

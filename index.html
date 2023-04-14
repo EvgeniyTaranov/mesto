@@ -41,32 +41,38 @@
 
   <div class="profile-popup popup">
     <div class="popup__container">
-      <form class="popup__form" name="introductionForm">
+      <form class="popup__form" name="introductionForm" novalidate>
         <button class="popup__close-button" type="button" aria-label="Закрыть"></button>
         <h3 class="popup__header">Редактировать профиль</h3>
         <fieldset class="popup__fieldset">
-          <input id="name-field" name="nameInput" type="text" placeholder="Введите имя"
-            class="popup__field popup__field_input_name">
-          <input id="about-field" name="aboutInput" type="text" placeholder="Укажите род занятий"
-            class="popup__field popup__field_input_about">
+          <input id="name-field" name="nameInput" type="text" placeholder="Введите имя" required minlength="2"
+            maxlength="40" class="popup__field popup__field_input_name">
+          <span class="name-field-error popup__field-error"></span>
+          <input id="about-field" name="aboutInput" type="text" placeholder="Укажите род занятий" required minlength="2"
+            maxlength="200" class="popup__field popup__field_input_about">
+          <span class="about-field-error popup__field-error"></span>
         </fieldset>
-        <button class="popup__save-button" type="submit" aria-label="Сохранить">Сохранить</button>
+        <button class="popup__save-button popup__save-button_disabled" type="submit"
+          aria-label="Сохранить">Сохранить</button>
       </form>
     </div>
   </div>
 
   <div class="card-popup popup">
     <div class="popup__container">
-      <form class="popup__form" name="addNewCardForm">
+      <form class="popup__form" name="addNewCardForm" novalidate>
         <button class="popup__close-button" type="button" aria-label="Закрыть"></button>
         <h3 class="popup__header">Новое место</h3>
         <fieldset class="popup__fieldset">
-          <input id="place-field" name="nameOfPlaceInput" type="text" placeholder="Название"
-            class="popup__field popup__field_input_name">
-          <input id="link-field" name="imageLinkInput" type="text" placeholder="Ссылка на картинку"
+          <input id="place-field" name="nameOfPlaceInput" type="text" placeholder="Название" required minlength="2"
+            maxlength="30" class="popup__field popup__field_input_name">
+          <span class="place-field-error popup__field-error"></span>
+          <input id="link-field" name="imageLinkInput" type="url" placeholder="Ссылка на картинку" required
             class="popup__field popup__field_input_about">
+          <span class="link-field-error popup__field-error"></span>
         </fieldset>
-        <button class="popup__save-button" type="submit" aria-label="Сохранить">Сохранить</button>
+        <button class="popup__save-button popup__save-button_disabled" type="submit"
+          aria-label="Сохранить">Сохранить</button>
       </form>
     </div>
   </div>
@@ -90,6 +96,7 @@
     </li>
   </template>
 
+  <script src="./scripts/validation.js"></script>
   <script src="./scripts/script.js"></script>
 </body>
 

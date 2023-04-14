@@ -19,11 +19,6 @@
   .popup__field {
     max-width: 238px;
     margin: 0 22px;
-  }
-}
-
-@media screen and (max-width: 540px) {
-  .popup__field {
     padding: 30px 0 9px;
   }
 }
