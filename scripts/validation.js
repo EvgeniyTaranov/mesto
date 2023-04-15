@@ -62,7 +62,15 @@ function enableValidation() {
   });
 };
 
-enableValidation();
+enableValidation({
+  formSelector: '.popup__form',
+  inputSelector: '.popup__field',
+  inputErrorClass: 'popup__field_input_error',
+  errorClass: 'popup__field-error',
+  inputVisibleError: 'popup__field-error_active',
+  saveButtonSelector: '.popup__save-button',
+  inactiveSaveButtonClass: 'popup__save-button_disabled',
+});
 
 function hasInvalidInput(inputList) {
   return inputList.some((inputElement) => {

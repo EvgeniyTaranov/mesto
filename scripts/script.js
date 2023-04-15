@@ -68,7 +68,6 @@ function openPopup(popup) {
 
 function closePopup(popup) {
   popup.classList.remove('popup_opened');
-  document.addEventListener('keydown', closeByEsc);
 }
 
 closeButtons.forEach((button) => {
@@ -84,13 +83,13 @@ function closeByEsc(evt) {
 }
 
 const overlays = document.querySelectorAll('.popup');
-for (let i = 0; i < overlays.length; i++) {
-  overlays[i].addEventListener('click', function (event) {
+overlays.forEach((overlay) => {
+  overlay.addEventListener('click', function (event) {
     if (event.target === event.currentTarget) {
       closePopup(event.currentTarget);
     }
   });
-}
+});
 
 function createCard(cardData) {
   const cardElement = cardTemplate.content.querySelector('.elements__card').cloneNode(true);
