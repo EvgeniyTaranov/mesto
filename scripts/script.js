@@ -25,7 +25,6 @@ const initialCards = [
   }
 ];
 
-
 const cardTemplate = document.querySelector('#elements__card');
 
 const cardContainer = document.querySelector('.elements__grid');
@@ -68,6 +67,7 @@ function openPopup(popup) {
 
 function closePopup(popup) {
   popup.classList.remove('popup_opened');
+  document.removeEventListener('keydown', closeByEsc);
 }
 
 closeButtons.forEach((button) => {
@@ -120,7 +120,6 @@ function createCard(cardData) {
   return cardElement;
 }
 
-
 function uploadInitialCards() {
   initialCards.forEach((cardData) => {
     const completeCard = createCard(cardData);
@@ -139,13 +138,11 @@ function uploadInitialCards() {
 
 uploadInitialCards();
 
-
 function openProfilePopup(profilePopup) {
   openPopup(profilePopup);
   addProfileName.value = profileName.textContent;
   addProfileDescription.value = profileAbout.textContent;
 }
-
 
 function handleProfilePopupFormSubmit(evt) {
   evt.preventDefault();
@@ -154,12 +151,10 @@ function handleProfilePopupFormSubmit(evt) {
   closePopup(profilePopup);
 }
 
-
 function openCardPopup() {
   cardPopupForm.reset();
   openPopup(cardPopup);
 }
-
 
 function handleCardPopupFormSubmit(event) {
   event.preventDefault();
@@ -173,7 +168,6 @@ function handleCardPopupFormSubmit(event) {
   cardContainer.insertBefore(completeCard, cardContainer.firstChild);
   closePopup(cardPopup);
 }
-
 
 editButton.addEventListener('click', function () {
   openProfilePopup(profilePopup);
