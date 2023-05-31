@@ -66,7 +66,7 @@ addCardPopup.setEventListeners();
 const editProfilePopup = new PopupWithForm('.profile-popup', handleProfilePopupFormSubmit);
 editProfilePopup.setEventListeners();
 
-const section = new Section({ items: initialCards, renderer: renderCard }, '.elements__grid');
+const section = new Section({ items: initialCards, renderer: (data, wrap) => section.addItem(createCard(data)) }, '.elements__grid');
 section.renderItems();
 
 const userInfo = new UserInfo({ userNameSelector: '.profile__name', userDescriptionSelector: '.profile__about' });
