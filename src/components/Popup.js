@@ -11,12 +11,12 @@ export class Popup {
   }
 
   setEventListeners() {
-    const closeButton = this._popup.querySelector('.popup__close-button');
+    const closeButton = this._popup.querySelector('.popup__close-button')
     this._popup.addEventListener('click', (e) => {
       if (!e.target.closest('.popup__container') || e.target === closeButton) {
         this.close();
       }
-    });
+    })
   }
 
   open() {
@@ -29,4 +29,3 @@ export class Popup {
     document.removeEventListener('keydown', this._handleEscClose);
   }
 }
-

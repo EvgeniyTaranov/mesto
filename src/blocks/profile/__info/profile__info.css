@@ -2,7 +2,7 @@
   margin: 22px auto 25px 30px;
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 8px;
   max-width: 336px;
 }
 
@@ -15,7 +15,7 @@
 @media screen and (max-width: 600px) {
   .profile__info {
     max-width: 282px;
-    margin: 26px auto 36px;
+    margin: 0px auto 36px;
     gap: 6px;
   }
 }
