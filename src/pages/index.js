@@ -27,15 +27,16 @@ const createCard = (data) => {
     },
 
     (id) => {
-      deleteConfirmationPopup.open()
+      deleteConfirmationPopup.open();
       deleteConfirmationPopup.changeSubmitHandler(() => {
-        api.deleteCard(id)
-          .then(res => {
-            card.deleteCard()
+        api
+          .deleteCard(id)
+          .then((res) => {
+            card.deleteCard();
+            deleteConfirmationPopup.close()
           })
-          .catch(err => console.log(`Ошибка...: ${err}`))
-          .finally(() => deleteConfirmationPopup.close());
-      })
+          .catch((err) => console.log(`Ошибка...: ${err}`));
+      });
     },
 
     (id) => {
@@ -151,9 +152,9 @@ Promise.all([api.getProfile(), api.getCards()])
   .then(([userData, cards]) => {
     userId = userData._id;
 
-    var cardList = [];
+    const cardList = [];
 
-    cards.forEach(data => {
+    cards.forEach((data) => {
       cardList.unshift({
         name: data.name,
         link: data.link,
@@ -161,11 +162,11 @@ Promise.all([api.getProfile(), api.getCards()])
         id: data._id,
         userId: userId,
         ownerId: data.owner._id
-      })
+      });
     });
 
     userInfo.setUserInfo(userData);
     section.renderItems(cardList);
   })
 
-  .catch(err => console.log(`Ошибка...: ${err}`));
+  .catch((err) => console.log(`Ошибка...: ${err}`));
